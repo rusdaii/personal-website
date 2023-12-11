@@ -1,0 +1,21 @@
+@import '../pages/Home/home.scss';
+
+.about {
+  .title {
+    h1 {
+      text-align: center;
+      font-size: 72px;
+
+      @include mobile {
+        display: none;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .content {
+    @include mobile {
+      display: inline;
+    }
+  }
+}
