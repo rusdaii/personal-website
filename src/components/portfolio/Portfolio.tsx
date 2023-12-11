@@ -8,37 +8,6 @@ import { useProject } from '@/query/project';
 import { PortfolioCard } from './portfolioCard/PortfolioCard';
 import { ProjectProps } from './type';
 
-//
-//   {
-//     id: 1,
-//     title: 'React Commerce',
-//     img: '/images/portfolio.png',
-//     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut
-//           corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.`,
-//   },
-//   {
-//     id: 2,
-//     title: 'Next.js Blog',
-//     img: '/images/portfolio.png',
-//     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut
-//           corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.`,
-//   },
-//   {
-//     id: 3,
-//     title: 'Vanilla JS App',
-//     img: '/images/portfolio.png',
-//     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut
-//     corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.`,
-//   },
-//   {
-//     id: 4,
-//     title: 'Music App',
-//     img: '/images/portfolio.png',
-//     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut
-//           corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.`,
-//   },
-// ];
-
 export const Portfolio = () => {
   const ref: RefObject<HTMLDivElement> = useRef(null);
 
@@ -55,8 +24,6 @@ export const Portfolio = () => {
   const { data } = useProject();
 
   const projects: ProjectProps[] = data?.data ?? [];
-
-  console.log(projects);
 
   return (
     <div id="portfolio" className="portfolio" ref={ref}>
