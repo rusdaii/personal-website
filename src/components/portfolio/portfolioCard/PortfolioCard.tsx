@@ -1,5 +1,4 @@
 // eslint-disable-next-line import-alias/import-alias
-
 import './portfolioCard.scss';
 import { useRef, RefObject } from 'react';
 
