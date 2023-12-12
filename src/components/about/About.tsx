@@ -44,7 +44,7 @@ export const About = () => {
           className="textContainer mt-4 md:mt-0 text-left flex flex-col h-full"
         >
           <h1 className="text-4xl font-bold text-white mb-4">
-            <motion.b whileHover={{ color: 'orange' }}>About</motion.b> Me
+            <motion.b whileHover={{ color: 'orange' }}>About Me</motion.b>
           </h1>
 
           <p className="text-base lg:text-lg">
@@ -57,12 +57,10 @@ export const About = () => {
           </p>
           <div className="flex flex-row justify-start mt-8 mb-8">
             <h1 className="text-4xl font-bold text-white">
-              <motion.b whileHover={{ color: 'orange' }}>Skill</motion.b> Set
+              <motion.b whileHover={{ color: 'orange' }}>Skill Set</motion.b>{' '}
             </h1>
           </div>
-          <div>
-            <Skills />
-          </div>
+          <Skills />
         </motion.div>
       </div>
     </div>

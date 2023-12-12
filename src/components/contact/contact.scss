@@ -73,6 +73,10 @@
       position: absolute;
       margin: auto;
       z-index: -1;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     form {

@@ -1,6 +1,6 @@
 import fetcher from '@/lib/fetcher';
 
-import { ProjectResponse, SkillResponse } from './types';
+import { ProjectResponse } from './types';
 
 export const getProjects = async () => {
   const respone = await fetcher({
@@ -9,13 +9,4 @@ export const getProjects = async () => {
   });
 
   return respone as ProjectResponse;
-};
-
-export const getSkills = async () => {
-  const respone = await fetcher({
-    url: '/skills',
-    method: 'GET',
-  });
-
-  return respone as SkillResponse;
 };

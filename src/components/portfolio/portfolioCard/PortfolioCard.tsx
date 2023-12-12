@@ -52,7 +52,7 @@ export const PortfolioCard = ({ item }: { item: ProjectProps }) => {
             style={{ y }}
           >
             <h2>{item.name}</h2>
-            <p>{item.description}</p>
+            <p className="description">{item.description}</p>
             <div className="buttons">
               <motion.button
                 whileHover={{ scale: 1.2 }}

@@ -2,13 +2,20 @@ import { RefObject, useRef } from 'react';
 import './contact.scss';
 
 import { motion, useInView } from 'framer-motion';
+import Link from 'next/link';
 
 import { textVariant } from '@/lib/variants';
+import { useUser } from '@/query/user';
 
 export const Contact = () => {
   const ref: RefObject<HTMLDivElement> = useRef(null);
 
   const isInView = useInView(ref, { margin: '-100px' });
+
+  const { data } = useUser();
+
+  const user = data?.data ?? null;
+
   return (
     <motion.div
       ref={ref}
@@ -21,15 +28,17 @@ export const Contact = () => {
         <motion.h1 variants={textVariant(0, 500)}>Get In Touch</motion.h1>
         <motion.div className="item" variants={textVariant(0, 500)}>
           <h2>Mail</h2>
-          <span>NjEoA@example.com</span>
+          <span>
+            <a href="mailto:rusdaii.html@gmail.com">{user?.email}</a>
+          </span>
         </motion.div>
         <motion.div className="item" variants={textVariant(0, 500)}>
-          <h2>Mail</h2>
-          <span>NjEoA@example.com</span>
-        </motion.div>
-        <motion.div className="item" variants={textVariant(0, 500)}>
-          <h2>Mail</h2>
-          <span>NjEoA@example.com</span>
+          <h2>Linkedin</h2>
+          <span>
+            <Link href="https://www.linkedin.com/in/rusdaii/" target="_blank">
+              Rusydi Ahmad Azwari
+            </Link>
+          </span>
         </motion.div>
       </motion.div>
       <div className="formContainer">

@@ -1,6 +1,6 @@
-# Next JS with React Query Template
+# Personal Website
 
-This is a template for creating Next JS (app directory) app with React Query for fetching data
+This is a personal website project Next JS (app directory) app with React Query for fetching data
 
 ## Technologies Used
 
@@ -11,10 +11,14 @@ This is a template for creating Next JS (app directory) app with React Query for
 
 ## How To Use
 
-For use this template to create Next JS App you can following commands:
+For use this template you can following commands:
 
 ```bash
-yarn create next-app -e https://github.com/samudrajovanka/nextjs-react-query-template
+git clone https://github.com/rusdaii/personal-website.git
+```
+
+```bash
+yarn install
 ```
 
 ## Scripts

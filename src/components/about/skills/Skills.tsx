@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { useSkill } from '@/query/project';
+import { useSkill } from '@/query/skill';
 
 export const Skills = () => {
   const { data } = useSkill();
 
   const skills = data?.data ?? [];
-
-  console.log(skills);
 
   return (
     <div>

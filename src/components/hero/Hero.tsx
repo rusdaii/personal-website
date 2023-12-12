@@ -3,8 +3,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import { imageVariant, scrollButtonVariant, textVariant } from '@/lib/variants';
+import { useUser } from '@/query/user';
 
 export const Hero = () => {
+  const { data } = useUser();
+
+  const user = data?.data ?? null;
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -33,6 +38,8 @@ export const Hero = () => {
               variants={textVariant(-500, 0)}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 1 }}
+              href={user?.resumeUrl}
+              target="_blank"
             >
               Download CV
             </motion.a>
