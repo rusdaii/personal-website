@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useSkill } from '@/query/skill';
 
 export const Skills = () => {

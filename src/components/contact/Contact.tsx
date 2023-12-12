@@ -5,16 +5,11 @@ import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 
 import { textVariant } from '@/lib/variants';
-import { useUser } from '@/query/user';
 
 export const Contact = () => {
   const ref: RefObject<HTMLDivElement> = useRef(null);
 
   const isInView = useInView(ref, { margin: '-100px' });
-
-  const { data } = useUser();
-
-  const user = data?.data ?? null;
 
   return (
     <motion.div
@@ -29,7 +24,7 @@ export const Contact = () => {
         <motion.div className="item" variants={textVariant(0, 500)}>
           <h2>Mail</h2>
           <span>
-            <a href="mailto:rusdaii.html@gmail.com">{user?.email}</a>
+            <a href="mailto:rusdaii.html@gmail.com">rusdaii.html@gmail.com</a>
           </span>
         </motion.div>
         <motion.div className="item" variants={textVariant(0, 500)}>
